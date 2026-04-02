@@ -33,6 +33,9 @@
             txtID = new TextBox();
             txtPW = new TextBox();
             lblErrorMsg = new Label();
+            chkShow = new CheckBox();
+            btnClearID = new Button();
+            btnClearPW = new Button();
             SuspendLayout();
             // 
             // btnLogin
@@ -88,18 +91,52 @@
             // 
             lblErrorMsg.AutoSize = true;
             lblErrorMsg.ForeColor = Color.Red;
-            lblErrorMsg.Location = new Point(72, 225);
+            lblErrorMsg.Location = new Point(72, 235);
             lblErrorMsg.Name = "lblErrorMsg";
             lblErrorMsg.Size = new Size(230, 15);
             lblErrorMsg.TabIndex = 4;
             lblErrorMsg.Text = "아이디 또는 비밀번호가 잘못 되었습니다.";
             lblErrorMsg.Visible = false;
             // 
+            // chkShow
+            // 
+            chkShow.AutoSize = true;
+            chkShow.Location = new Point(74, 213);
+            chkShow.Name = "chkShow";
+            chkShow.Size = new Size(102, 19);
+            chkShow.TabIndex = 5;
+            chkShow.Text = "비밀번호 표시";
+            chkShow.UseVisualStyleBackColor = true;
+            chkShow.CheckedChanged += chkShow_CheckedChanged;
+            // 
+            // btnClearID
+            // 
+            btnClearID.Location = new Point(416, 124);
+            btnClearID.Name = "btnClearID";
+            btnClearID.Size = new Size(25, 23);
+            btnClearID.TabIndex = 6;
+            btnClearID.Text = "x";
+            btnClearID.UseVisualStyleBackColor = true;
+            btnClearID.Click += btnClearID_Click;
+            // 
+            // btnClearPW
+            // 
+            btnClearPW.Location = new Point(416, 182);
+            btnClearPW.Name = "btnClearPW";
+            btnClearPW.Size = new Size(25, 23);
+            btnClearPW.TabIndex = 7;
+            btnClearPW.Text = "x";
+            btnClearPW.UseVisualStyleBackColor = true;
+            btnClearPW.Click += btnClearPW_Click;
+            // 
             // Form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(508, 380);
+            Controls.Add(btnClearPW);
+            Controls.Add(btnClearID);
+            Controls.Add(chkShow);
             Controls.Add(lblErrorMsg);
             Controls.Add(txtPW);
             Controls.Add(txtID);
@@ -118,5 +155,8 @@
         private TextBox txtID;
         private TextBox txtPW;
         private Label lblErrorMsg;
+        private CheckBox chkShow;
+        private Button btnClearID;
+        private Button btnClearPW;
     }
 }

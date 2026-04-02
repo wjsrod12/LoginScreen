@@ -81,5 +81,26 @@ namespace LoginScreen
                 btnLogin.PerformClick();
             }
         }
+
+        private void chkShow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkShow.Checked)
+            {
+                txtPW.UseSystemPasswordChar = !chkShow.Checked;
+            }
+
+        }
+
+        private void btnClearID_Click(object sender, EventArgs e)
+        {
+            txtID.Clear();
+            txtID.Focus();
+        }
+
+        private void btnClearPW_Click(object sender, EventArgs e)
+        {
+            txtPW.Clear();
+            txtPW.Focus();
+        }
     }
 }
