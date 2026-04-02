@@ -53,11 +53,32 @@ namespace LoginScreen
             string inputPW = txtPW.Text;
             if (inputID == myID && inputPW == myPW)
             {
+                lblErrorMsg.Visible = false;
                 MessageBox.Show("로그인 성공!");
             }
             else
             {
-                MessageBox.Show("로그인 실패~");
+                //MessageBox.Show("로그인 실패~");
+                //MessageBox.Show("로그인에 실패하였습니다.", "다시 시도하세요", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblErrorMsg.Visible = true;
+            }
+        }
+
+        private void txtID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                txtPW.Focus();
+            }
+        }
+
+        private void txtPW_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                btnLogin.PerformClick();
             }
         }
     }
