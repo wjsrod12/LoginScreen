@@ -21,6 +21,7 @@
 
 ![과제1 실행화면](img/screenshot.1.png)
 ![과제1 실행화면](img/screenshot.2.png)
+![과제1 실행화면](img/screenshot.3.png)
 
 
 - 과제 내용
