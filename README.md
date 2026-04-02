@@ -20,6 +20,8 @@
 - 과제1 코드의 실행 스크린샷
 
 ![과제1 실행화면](img/screenshot.1.png)
+![과제1 실행화면](img/screenshot.2.png)
+
 
 - 과제 내용
     -  기본 UI 구성하기
